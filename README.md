@@ -17,8 +17,8 @@ Listening on 1234...
 For instance, consider the following code:
 
 ```ruby
-    # say_hello.rb
-    "Hello #{name}"
+# say_hello.rb
+"Hello #{name}"
 ```
 
 Upload it to the daemon:
