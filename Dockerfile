@@ -1,0 +1,26 @@
+FROM ubuntu:trusty
+MAINTAINER Andre Dieb Martins <andre.dieb@gmail.com>
+
+RUN apt-get update -q
+RUN apt-get install -qy ruby2.0 ruby2.0-dev build-essential
+RUN gem2.0 install bundler && \
+    apt-get clean && \
+    rm -rf /var/lib/apt/lists/*
+
+# Speed up bundle install
+RUN rm -rf /root/.gemrc && \
+    echo "gem: --no-ri --no-rdoc" >> /root/.gemrc && \
+    echo "install: --no-rdoc --no-ri" >> /root/.gemrc
+
+RUN mkdir -p /fnd /fnd/lib/fnd
+WORKDIR /fnd
+
+ADD Gemfile Gemfile.lock fnd.gemspec /fnd/
+ADD lib/fnd/version.rb /fnd/lib/fnd/
+RUN bundle install
+
+ADD . /fnd
+
+EXPOSE 8080
+
+CMD ["ruby2.0", "./bin/fnd"]
