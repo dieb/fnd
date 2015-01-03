@@ -1,10 +1,6 @@
 #!/usr/bin/env ruby
 
-unless $LOAD_PATH.include?(File.dirname(__FILE__) + '/../lib/')
-  $LOAD_PATH << File.dirname(__FILE__) + '/../lib'
-end
+require_relative('../lib/fnd/daemon')
 
-require 'fnd/cli'
-
-cli = Fnd::CLI.new
-cli.run
+daemon = Fnd::Daemon.new
+daemon.run
