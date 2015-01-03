@@ -8,7 +8,7 @@ and running ruby code on demand. Think of it as a dynamic API.
 Run the 'fnd' daemon:
 
 ```bash
-$ fnd localhost:1234
+$ fnd --listen localhost:1234
 Listening on 1234...
 ```
 

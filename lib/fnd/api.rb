@@ -1,6 +1,6 @@
 require 'grape'
 
-require File.join(File.dirname(__FILE__), 'code')
+require_relative('code')
 
 module Fnd
   class API < Grape::API

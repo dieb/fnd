@@ -1,8 +1,8 @@
 require 'rack'
 
-require File.join(File.dirname(__FILE__), 'code')
-require File.join(File.dirname(__FILE__), 'api')
-require File.join(File.dirname(__FILE__), 'admin_api')
+require_relative('code')
+require_relative('api')
+require_relative('admin_api')
 
 module Fnd
   class Daemon
