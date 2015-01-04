@@ -31,7 +31,7 @@ Now the code can be invoked through a public API:
 
 ## Running on Docker
 
-fnd has a Docker image [dieb/fnd][https://registry.hub.docker.com/u/dieb/fnd/] for quickly
+fnd has a Docker image [dieb/fnd](https://registry.hub.docker.com/u/dieb/fnd/) for quickly
 running the daemon.
 
 To run it:
@@ -42,7 +42,7 @@ $ docker run --rm -ti -p 8080:8080 dieb/fnd
 
 ## License
 
-MIT License. See [LICENSE][https://github.com/dieb/fnd/blob/master/LICENSE] for details.
+MIT License. See [LICENSE](https://github.com/dieb/fnd/blob/master/LICENSE) for details.
 
 ## Copyright
 
