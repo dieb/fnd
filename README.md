@@ -3,27 +3,28 @@
 fnd, short for "function daemon", is a daemon program capable of storing
 and running ruby code on demand. Think of it as a dynamic API.
 
-## How it Works
+## How it works
 
-Consider the following greeting code:
+Consider the following Ruby code:
 
 ```ruby
 # say_hello.rb
 "Hello #{name}"
 ```
 
-Upload it to the daemon:
+You can upload it to the fnd daemon by running:
 
 ```bash
-$ fn upload say_hello.rb --to localhost:1234
+$ fn upload say_hello.rb --to localhost:8080
 ```
 
-Now the code can be invoked through a public API:
+Once uploaded, the daemon loads your code and hosts it through a HTTP API.
+For instance, you can invoke it from the command-line with:
 
-    $ curl -d "{\"name\":\"Andre\"}" http://localhost:1234/say_hello -H "Content-type: application/json"
-    Hello Andre
-
-
+```bash
+$ curl -d "{\"name\":\"fnd\"}" http://localhost:8080/say_hello -H "Content-type: application/json"
+Hello fnd
+```
 
 ## Installation
 
@@ -31,8 +32,7 @@ Now the code can be invoked through a public API:
 $ gem install fnd
 ```
 
-fnd also has a Docker image [dieb/fnd](https://registry.hub.docker.com/u/dieb/fnd/) for
-quickly running the daemon.
+Alternatively fnd also has a Docker image [dieb/fnd](https://registry.hub.docker.com/u/dieb/fnd/):
 
 ```bash
 $ docker pull dieb/fnd
