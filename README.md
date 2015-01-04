@@ -40,7 +40,7 @@ $ docker pull dieb/fnd
 
 ## Usage
 
-Run the 'fnd' daemon:
+Run the fnd daemon:
 
 ```bash
 $ fnd
