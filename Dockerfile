@@ -22,5 +22,6 @@ RUN bundle install
 ADD . /fnd
 
 EXPOSE 8080
+ENV RACK_ENV production
 
 CMD ["ruby2.0", "./bin/fnd"]
