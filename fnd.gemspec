@@ -14,7 +14,7 @@ Gem::Specification.new do |s|
 
   s.files = Dir['{bin,lib}/**/*', 'MIT-LICENSE', 'Rakefile', 'README.md']
   s.test_files = Dir['spec/**/*']
-  s.executables = Dir['bin/*']
+  s.executables = Dir['bin/*'].map { |f| File.basename(f) }
   s.require_paths = ['lib']
 
   s.add_development_dependency('rake', '~> 10.3')
