@@ -17,7 +17,7 @@ WORKDIR /fnd
 
 ADD Gemfile fnd.gemspec /fnd/
 ADD lib/fnd/version.rb /fnd/lib/fnd/
-RUN bundle install
+RUN bundle install --without development
 
 ADD . /fnd
 
