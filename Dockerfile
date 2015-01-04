@@ -15,7 +15,7 @@ RUN rm -rf /root/.gemrc && \
 RUN mkdir -p /fnd /fnd/lib/fnd
 WORKDIR /fnd
 
-ADD Gemfile Gemfile.lock fnd.gemspec /fnd/
+ADD Gemfile fnd.gemspec /fnd/
 ADD lib/fnd/version.rb /fnd/lib/fnd/
 RUN bundle install
 
