@@ -28,3 +28,22 @@ Now the code can be invoked through a public API:
     $ curl -d "{\"name\":\"Andre\"}" http://localhost:1234/say_hello -H "Content-type: application/json"
     Hello Andre
 
+
+## Running on Docker
+
+fnd has a Docker image [dieb/fnd][https://registry.hub.docker.com/u/dieb/fnd/] for quickly
+running the daemon.
+
+To run it:
+
+```bash
+$ docker run --rm -ti -p 8080:8080 dieb/fnd
+```
+
+## License
+
+MIT License. See [LICENSE][https://github.com/dieb/fnd/blob/master/LICENSE] for details.
+
+## Copyright
+
+Copyright (c) 2014-2015 André Dieb Martins
