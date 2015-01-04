@@ -32,7 +32,7 @@ Hello fnd
 $ gem install fnd
 ```
 
-Alternatively fnd also has a Docker image [dieb/fnd](https://registry.hub.docker.com/u/dieb/fnd/):
+Alternatively use our Docker image [dieb/fnd](https://registry.hub.docker.com/u/dieb/fnd/):
 
 ```bash
 $ docker pull dieb/fnd
